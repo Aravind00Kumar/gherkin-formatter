@@ -28,7 +28,7 @@ var Indent = function (config) {
     this.init = function (originalText) {
         var formatedText = '';
         this.originalText = originalText;
-        this.lines = this.originalText.split('\r\n');
+        this.lines = this.originalText.split(/\r?\n/g);
         if (this.lines[this.lines.length - 1].indexOf('|') !== -1)
             this.lines.push(" ");
     }
